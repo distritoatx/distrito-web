@@ -74,6 +74,8 @@
 
 .center {
   display: flex;
+  flex-direction: column-reverse;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   position: relative;
