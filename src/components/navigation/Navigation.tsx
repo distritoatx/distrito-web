@@ -115,5 +115,5 @@ const NavButton = styled.a<{isopen: boolean}>`
 	left: 2em;
 	position: absolute;
 	transform: ${(p) =>
-		!p.isopen ? 'translate(0px, 0px)' : 'translate(100%, 1000%)'};
+		!p.isopen ? 'translate(0px, 0px)' : 'translate(100%, 900%)'};
 `
