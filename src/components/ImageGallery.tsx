@@ -39,6 +39,9 @@ const ImageGallery = ({gallery}: galleryTypes) => {
 								src={hash.concat(ext)}
 								priority
 								fill
+								sizes='(min-width: 640px) 10vw,
+                (min-width: 750px) 45vw,
+                100vw'
 								alt={alternativeText || 'Food Item'}
 							/>
 						) : (
@@ -46,6 +49,9 @@ const ImageGallery = ({gallery}: galleryTypes) => {
 								src={hash.concat(ext)}
 								priority
 								fill
+								sizes='(min-width: 640px) 10vw,
+                (min-width: 750px) 45vw,
+                100vw'
 								alt={alternativeText || 'Food Item'}
 							/>
 						)}

@@ -51,6 +51,9 @@ const Footer = ({brushAsset, metaImageAsset}: footerProps) => {
 				alt={brushAsset.alternativeText}
 				priority
 				quality={40}
+				sizes='(min-width: 640px) 10vw,
+        (min-width: 750px) 45vw,
+        100vw'
 				fill
 			/>
 		</FooterStyled>
@@ -137,7 +140,7 @@ const MetaStyled = styled(Image)`
 	}
 `
 const BrushStyled = styled(Image)`
-	object-fit: contain;
+	object-fit: fill;
 	width: 1000px;
 	position: relative;
 	height: 120px;
