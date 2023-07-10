@@ -2,10 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  compiler: {
+    styledComponents: true,
+  },
   images: {
     loader: 'custom',
     loaderFile: './distritoLoader.tsx',
-    domains: ["localhost", "http://107.23.42.247:1337", 'distrito-strapi-bucket.s3.amazonaws.com'],
+    domains: ["localhost", "https://strapi.distritoatx.com", 'distrito-strapi-bucket.s3.amazonaws.com'],
     remotePatterns: [{
       protocol: 'https',
       hostname: 'distrito-strapi-bucket.s3.amazonaws.com',
@@ -14,9 +17,11 @@ const nextConfig = {
     }]
   },
   env: {
-    APP_TITLE: 'Texas Bear Photos | Photography',
-    NEXT_PUBLIC_STRAPI_API_URL: 'http://107.23.42.247:1337'
-  }
+    APP_TITLE: 'Distrito | Underground Fine Dining',
+    NEXT_PUBLIC_STRAPI_API_URL: 'https://strapi.distritoatx.com'
+  },
+  locales: ['en-US', 'es', 'jp'],
+
 }
 
 module.exports = nextConfig

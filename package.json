@@ -9,16 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.4.3",
     "@types/node": "20.1.4",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
+    "css-in-js-media": "^2.0.1",
     "eslint": "8.40.0",
     "eslint-config-next": "13.4.2",
+    "framer-motion": "^10.12.16",
+    "moment": "^2.29.4",
     "next": "13.4.2",
     "qs": "^6.11.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-intersection-observer": "^9.5.2",
+    "react-markdown": "^8.0.7",
     "strapi-plugin-populate-deep": "^2.0.0",
+    "styled-components": "^6.0.0-rc.2",
     "typescript": "5.0.4"
   },
   "devDependencies": {
