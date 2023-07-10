@@ -56,6 +56,7 @@ const Container = ({reservationZone}: reservationZoneTypes) => {
 					<ReservationLogo
 						width={1200}
 						height={300}
+						quality={40}
 						priority
 						alt={logoImage.alternativeText}
 						src={logoImage.hash.concat(logoImage.ext)}

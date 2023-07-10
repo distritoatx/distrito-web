@@ -45,6 +45,7 @@ const Container = ({aboutZone}: aboutZoneTypes) => {
 					src={heroImage.hash.concat(heroImage.ext)}
 					alt={heroImage.alternativeText}
 					fill
+					quality={40}
 					priority
 				/>
 			</AboutHero>
@@ -54,9 +55,10 @@ const Container = ({aboutZone}: aboutZoneTypes) => {
 				<ChefImage
 					src={chefImage.hash.concat(chefImage.ext)}
 					alt={chefImage.alternativeText}
+					quality={40}
 					height={1102}
 					width={689}
-					loading='lazy'
+					priority
 				/>
 			</AboutDetails>
 		</AboutContainer>

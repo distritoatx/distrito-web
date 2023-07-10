@@ -37,6 +37,8 @@ const Footer = ({brushAsset, metaImageAsset}: footerProps) => {
 				<MetaStyled
 					src={metaImageAsset.hash.concat(metaImageAsset.ext)}
 					alt={metaImageAsset.alternativeText}
+					priority
+					quality={40}
 					width={35}
 					height={35}
 				/>
@@ -47,6 +49,8 @@ const Footer = ({brushAsset, metaImageAsset}: footerProps) => {
 			<BrushStyled
 				src={brushAsset.hash.concat(brushAsset.ext)}
 				alt={brushAsset.alternativeText}
+				priority
+				quality={40}
 				fill
 			/>
 		</FooterStyled>
@@ -135,6 +139,7 @@ const MetaStyled = styled(Image)`
 const BrushStyled = styled(Image)`
 	object-fit: contain;
 	width: 1000px;
+	position: relative;
 	height: 120px;
 
 	${media('<=desktop')} {

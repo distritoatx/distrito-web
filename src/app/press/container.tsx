@@ -74,6 +74,7 @@ const Container = ({pressZone}: pressZoneTypes) => {
 						<PressMetaLogo
 							src={hash.concat(ext)}
 							alt={alternativeText}
+							quality={40}
 							width={50}
 							height={50}
 							priority

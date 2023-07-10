@@ -48,6 +48,7 @@ export default async function Home() {
 				<styles.Hero
 					src={heroImage.hash.concat(heroImage.ext)}
 					alt={heroImage.alternativeText}
+					quality={40}
 					priority
 					fill
 				/>
@@ -56,6 +57,7 @@ export default async function Home() {
 						src={logoMeta.hash.concat(logoMeta.ext)}
 						alt={heroImage.alternativeText}
 						width={750}
+						quality={40}
 						height={200}
 						priority
 					/>
