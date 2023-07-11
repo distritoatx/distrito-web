@@ -6,6 +6,7 @@ import Head from 'next/head'
 import Social from '@/components/Social'
 import {fetchAPI} from '@/lib/strapi-api'
 import {Montserrat} from 'next/font/google'
+import {Analytics} from '@vercel/analytics/react'
 
 export const metadata = {
 	title: 'Distrito | Underground Dinning',
@@ -62,7 +63,10 @@ export default async function RootLayout({
 				</Head>
 				<Header metaImageAsset={metaImageAsset} />
 				<Social socials={metaSocial} />
-				<StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+				<StyledComponentsRegistry>
+					{children}
+					<Analytics />
+				</StyledComponentsRegistry>
 				<Footer
 					brushAsset={brushAsset}
 					metaImageAsset={metaImageAsset}
