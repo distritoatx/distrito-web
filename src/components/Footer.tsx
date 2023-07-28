@@ -46,16 +46,6 @@ const Footer = ({brushAsset, metaImageAsset}: footerProps) => {
 					<p>en | es</p>
 				</div>
 			</MetaInfo>
-			<BrushStyled
-				src={brushAsset.hash.concat(brushAsset.ext)}
-				alt={brushAsset.alternativeText}
-				priority
-				quality={40}
-				sizes='(min-width: 640px) 10vw,
-        (min-width: 750px) 45vw,
-        100vw'
-				fill
-			/>
 		</FooterStyled>
 	)
 }
@@ -63,11 +53,11 @@ const Footer = ({brushAsset, metaImageAsset}: footerProps) => {
 const FooterStyled = styled.footer`
 	text-align: center;
 	overflow: hidden;
-	width: 90%;
 	position: relative;
 	margin: 0 auto;
 	display: flex;
 	height: 7rem;
+	background-color: rgba(49, 49, 49, 1);
 
 	${media('<=desktop')} {
 		height: 5rem;
@@ -140,10 +130,8 @@ const MetaStyled = styled(Image)`
 	}
 `
 const BrushStyled = styled(Image)`
-	object-fit: fill;
-	width: 1000px;
+	object-fit: contain;
 	position: relative;
-	height: 120px;
 
 	${media('<=desktop')} {
 		width: 800px;

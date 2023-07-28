@@ -56,7 +56,7 @@ const Container = ({aboutZone}: aboutZoneTypes) => {
 					src={chefImage.hash.concat(chefImage.ext)}
 					alt={chefImage.alternativeText}
 					quality={40}
-					height={1102}
+					height={1002}
 					width={689}
 					priority
 				/>
@@ -82,15 +82,16 @@ const AboutHero = styled.div`
 const AboutDetails = styled.div`
 	padding: 10rem;
 	display: grid;
-	grid-gap: 2rem;
-	grid-template-columns: repeat(8, 1fr);
-	grid-template-rows: repeat(8, 1fr);
+	grid-gap: 10px;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(6, 1fr);
 	flex-direction: row;
 	flex: 2;
 	flex-wrap: wrap;
 
-	${media('<=desktop')} {
+	${media('<=tablet')} {
 		display: flex;
+		flex-direction: column;
 		align-items: center;
 		padding: 3rem 1rem;
 	}
@@ -100,12 +101,11 @@ const AboutTitle = styled.h1`
 	font-weight: bold;
 	font-size: 50px;
 	left: 20%;
-	width: 20%;
+	width: 25%;
 	margin-top: -5rem;
 	overflow: auto;
 	z-index: 2;
 	position: absolute;
-	overflow: hidden;
 
 	span {
 		font-weight: 400;
@@ -121,7 +121,11 @@ const AboutTitle = styled.h1`
 		position: relative;
 		font-size: 50px;
 		margin-top: 0rem;
-		left: 10%;
+		left: 0%;
+	}
+
+	${media('<=phone')} {
+		left: 0%;
 	}
 `
 
@@ -129,18 +133,32 @@ const AboutBio = styled.p`
 	padding-top: 5rem;
 	flex: 1;
 	z-index: 1;
-	grid-column-start: span 1;
-	grid-column-end: 3;
+	grid-column-start: 2;
+	grid-column-end: 4;
 	grid-row-start: 1;
 	grid-row-end: 8;
 	animation: reveal 1.5s forwards 0s;
 	font-size: 12px;
 	text-align: start;
 
+	@media (max-width: 1300px) {
+		grid-column-start: 1;
+		grid-column-end: 4;
+	}
+
 	${media('<=desktop')} {
-		width: 70vw;
-		margin-bottom: 2rem;
-		padding: 2rem;
+		padding: 1rem;
+		grid-column-start: 1;
+	}
+
+	${media('<=tablet')} {
+		grid-column-start: 1;
+		grid-column-end: 1;
+		width: 30rem;
+	}
+
+	${media('<=phone')} {
+		width: 20rem;
 	}
 
 	@keyframes reveal {
@@ -158,13 +176,19 @@ const ChefImage = styled(Image)`
 	flex: 2;
 	flex-basis: auto;
 	overflow: hidden;
-	object-fit: cover;
+	object-fit: contain;
 
-	grid-column-start: 3;
+	grid-column-start: 4;
 	grid-column-end: 8;
 	grid-row-start: 1;
 	grid-row-end: 8;
 	animation: reveal 1.5s forwards 0s;
+
+	@media (max-width: 1300px) {
+		object-fit: contain;
+		height: 40rem;
+		width: 25rem;
+	}
 
 	${media('<=tablet')} {
 		object-fit: contain;

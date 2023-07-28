@@ -119,7 +119,7 @@ const ReservationLogo = styled(Image)`
 
 const ReservationsDetails = styled.div`
 	color: white;
-	margin-left: 50%;
+	margin-left: 30%;
 	width: 50rem;
 	display: flex;
 	flex-direction: column;
