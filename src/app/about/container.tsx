@@ -93,7 +93,7 @@ const AboutDetails = styled.div`
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		padding: 3rem 1rem;
+		padding: 2rem 0;
 	}
 `
 
@@ -154,7 +154,7 @@ const AboutBio = styled.p`
 	${media('<=tablet')} {
 		grid-column-start: 1;
 		grid-column-end: 1;
-		width: 30rem;
+		width: 20rem;
 	}
 
 	${media('<=phone')} {
