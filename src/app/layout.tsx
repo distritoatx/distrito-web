@@ -63,7 +63,7 @@ export default async function RootLayout({
 						content={metaDescription}
 						key='description'
 					/>
-					<meta name='keywords' content='{keywords}' />
+					<meta name='keywords' content={keywords} />
 					<meta property='og:image' content={Logo} key='og:image' />
 					<meta
 						name='instagram:card'
