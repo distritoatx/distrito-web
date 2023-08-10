@@ -23,6 +23,6 @@ type loaderData = {
 
 export default function distritoLoader({src, width, quality}: loaderData) {
 	return `https://distrito-strapi-bucket.s3.amazonaws.com/${src}?w=${width}&q=${
-		quality || 75
+		quality || 50
 	}`
 }

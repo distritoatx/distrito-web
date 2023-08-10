@@ -166,10 +166,14 @@ export const Logo = styled(Image)`
 `
 
 export const Hero = styled(Image)`
-	width: 100vw;
+	width: 1100px;
 	object-fit: cover;
 	${media('<=tablet')} {
-		width: 50vw;
+		width: 700px;
+	}
+
+	${media('<=phone')} {
+		width: 400px;
 	}
 `
 

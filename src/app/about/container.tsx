@@ -205,10 +205,13 @@ const ChefImage = styled(Image)`
 `
 
 const HeroImage = styled(Image)`
-	width: 100vw;
+	width: 1200px;
 	object-fit: cover;
 	${media('<=tablet')} {
-		width: 50vw;
+		width: 700px;
+	}
+	${media('<=tablet')} {
+		width: 400px;
 	}
 `
 export default Container
