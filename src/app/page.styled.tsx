@@ -173,7 +173,7 @@ export const Hero = styled(Image)`
 	}
 
 	${media('<=phone')} {
-		width: 400px;
+		width: 200px;
 	}
 `
 

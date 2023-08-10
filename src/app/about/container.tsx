@@ -45,6 +45,7 @@ const Container = ({aboutZone}: aboutZoneTypes) => {
 					src={heroImage.hash.concat(heroImage.ext)}
 					alt={heroImage.alternativeText}
 					fill
+					width={1200}
 					quality={40}
 					priority
 				/>
