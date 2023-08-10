@@ -25,6 +25,7 @@
     "react-dom": "18.2.0",
     "react-intersection-observer": "^9.5.2",
     "react-markdown": "^8.0.7",
+    "sharp": "^0.32.4",
     "strapi-plugin-populate-deep": "^2.0.0",
     "styled-components": "^6.0.0-rc.2",
     "typescript": "5.0.4"

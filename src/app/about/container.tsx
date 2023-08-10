@@ -34,7 +34,7 @@ type aboutZoneTypes = {
 
 const Container = ({aboutZone}: aboutZoneTypes) => {
 	// Image objects
-	const heroImage = aboutZone.AboutHero.data.attributes
+	const heroImage = aboutZone.AboutHero.data.attributes.formats.large
 	const chefImage = aboutZone.Chef.data.attributes
 	const {Title, Bio} = aboutZone
 
@@ -45,7 +45,6 @@ const Container = ({aboutZone}: aboutZoneTypes) => {
 					src={heroImage.hash.concat(heroImage.ext)}
 					alt={heroImage.alternativeText}
 					fill
-					width={1200}
 					quality={40}
 					priority
 				/>
@@ -206,7 +205,7 @@ const ChefImage = styled(Image)`
 `
 
 const HeroImage = styled(Image)`
-	width: 1200px;
+	width: 1100px;
 	object-fit: cover;
 	${media('<=tablet')} {
 		width: 700px;

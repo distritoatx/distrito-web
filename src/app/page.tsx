@@ -40,7 +40,7 @@ export default async function Home() {
 	const logoMeta = Logo.data.attributes
 	const metaImageMeta = metaImage.data.attributes
 
-	const heroImage = HeroImage.data.attributes
+	const heroImage = HeroImage.data.attributes.formats.large
 
 	return (
 		<styles.Main>

@@ -47,7 +47,7 @@ const Container = ({reservationZone}: reservationZoneTypes) => {
 	} = reservationZone
 
 	const logoImage = PageAssets.data[0].attributes
-	const heroImage = PageAssets.data[1].attributes
+	const heroImage = PageAssets.data[1].attributes.formats.large
 
 	return (
 		<ReservationContainer>

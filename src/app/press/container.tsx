@@ -36,7 +36,7 @@ type pressZoneTypes = {
 const Container = ({pressZone}: pressZoneTypes) => {
 	const {Title, Details, Logo, PressHero} = pressZone
 	const {hash, ext, alternativeText} = Logo.data.attributes
-	const pressHero = PressHero.data.attributes
+	const pressHero = PressHero.data.attributes.formats.large
 	const animationControl = useAnimation()
 	const {ref, inView} = useInView({
 		threshold: 0.5,
