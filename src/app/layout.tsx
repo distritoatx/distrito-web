@@ -33,16 +33,27 @@ export default async function RootLayout({
 				'InternationalGlobal.Logo',
 				'InternationalGlobal.PageAssets',
 				'InternationalGlobal.metaSocial.logo',
+				'InternationalGlobal.Favicon',
 			],
 		},
 		options: {},
 	})
 
-	const {keywords, metaDescription, Logo, PageAssets, metaImage, metaSocial} =
-		res.data.attributes.InternationalGlobal[0]
+	const {
+		keywords,
+		metaDescription,
+		Logo,
+		PageAssets,
+		metaImage,
+		metaTitle,
+		metaSocial,
+		Favicon,
+	} = res.data.attributes.InternationalGlobal[0]
 
 	const brushAsset = PageAssets.data[1].attributes
 	const metaImageAsset = metaImage.data.attributes
+	const logoImg = Logo.data.attributes
+	const favicon = Favicon.data.attributes
 	return (
 		<html lang='en'>
 			<body className={montserrat.className}>
@@ -59,6 +70,37 @@ export default async function RootLayout({
 						content='summary_large_image'
 						key='instagram:card'
 					/>
+					<link rel='shortcut icon' href={favicon.url} />
+					<link
+						rel='canonical'
+						href={'https://www.distritoatx.com'}
+					/>
+					<meta
+						name='instagram:card'
+						content='summary_large_image'
+						key='instagram:card'
+					/>
+					<meta
+						name='Description'
+						content={metaDescription}
+						key='description'
+					/>
+					<meta name='keywords' content={metaDescription} />
+
+					<meta name='twitter:card' content='summary_large_image' />
+					<meta name='twitter:image' content={logoImg.url} />
+					<meta name='twitter:title' content={metaTitle} />
+					<meta name='twitter:creator' content='' />
+					<meta name='twitter:site' content='' />
+					<meta
+						name='twitter:description'
+						content={metaDescription}
+					/>
+					<meta property='og:type' content='website' />
+					<meta property='og:url' content='www.distritoatx.com' />
+					<meta property='og:title' content={metaTitle} />
+					<meta property='og:description' content={metaDescription} />
+					<meta property='og:image' content={logoImg.url} />
 					<link rel='canonical' href={'https://distritoatx.com'} />
 				</Head>
 				<Header metaImageAsset={metaImageAsset} />
